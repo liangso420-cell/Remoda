@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ReModa: tienda digital de moda circular en Costa Rica. Ropa de segunda mano con fotos reales, tallas claras, estado transparente y precios visibles.">
+  <title>ReModa | Moda circular en Costa Rica</title>
+
+  <!-- Ícono de la pestaña (logo de ReModa) -->
+  <link rel="icon" type="image/png" href="logo-icono.png">
+
+  <!-- Tipografías: Fraunces (títulos) e Inter (textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       1. ENCABEZADO Y MENÚ DE NAVEGACIÓN
+       ========================================================= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="ReModa, ir al inicio">
+        <img src="logo-icono.png" alt="" class="logo__mark" width="44" height="44">
+        <span class="logo__text">Re<span>Moda</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#catalogo" class="nav__link">Catálogo</a></li>
+          <li><a href="#como-funciona" class="nav__link">Cómo funciona</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+        <a href="#catalogo" class="btn btn--primary btn--sm nav__cta">Explorar prendas</a>
+      </nav>
+
+      <!-- Botón de menú para celulares -->
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =========================================================
+         2. SECCIÓN PRINCIPAL (HERO)
+         ========================================================= -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__text reveal">
+          <span class="eyebrow">Moda circular · Costa Rica</span>
+          <h1 class="hero__title">Tu estilo, una <em>segunda oportunidad.</em></h1>
+          <p class="hero__subtitle">
+            Descubre prendas únicas de segunda mano, conoce su historia y viste con estilo
+            mientras ayudas a reducir el desperdicio textil.
+          </p>
+          <div class="hero__actions">
+            <a href="#catalogo" class="btn btn--primary">
+              Explorar catálogo
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#como-funciona" class="btn btn--ghost">Cómo funciona</a>
+          </div>
+          <ul class="hero__highlights">
+            <li>Tallas y medidas claras</li>
+            <li>Estado explicado</li>
+            <li>Precios en colones</li>
+          </ul>
+        </div>
+
+        <div class="hero__media reveal">
+          <div class="hero__image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1000&q=80"
+              alt="Perchero con prendas de segunda mano en tonos neutros"
+              class="hero__image"
+              data-fallback="Moda sostenible ReModa"
+              width="1000" height="1200">
+          </div>
+          <div class="hero__badge hero__badge--top">
+            <span class="hero__badge-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
+            </span>
+            <div><strong>Ficha digital</strong><small>en cada prenda</small></div>
+          </div>
+          <div class="hero__badge hero__badge--bottom">
+            <span class="hero__badge-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>
+            </span>
+            <div><strong>Desde <span id="precioDesde">₡3.500</span></strong><small>precios visibles</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. EL PROBLEMA Y NUESTRA SOLUCIÓN
+         ========================================================= -->
+    <section class="section section--beige" id="solucion">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="eyebrow">El problema y nuestra solución</span>
+          <h2>La moda circular, ahora más fácil</h2>
+          <p>
+            Comprar ropa de segunda mano puede ser complicado cuando no sabes si la talla te quedará,
+            en qué estado real está la prenda o cuánto cuesta. ReModa existe para quitarte esas dudas.
+          </p>
+        </header>
+
+        <div class="problem-grid">
+          <!-- Problema -->
+          <article class="problem-card reveal">
+            <div class="problem-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=900&q=80"
+                alt="Prendas dobladas y colgadas en una tienda de ropa"
+                loading="lazy"
+                data-fallback="Ropa de segunda mano">
+            </div>
+            <div class="problem-card__body">
+              <h3>Lo que suele complicar la compra</h3>
+              <ul class="problem-list">
+                <li><strong>¿Me quedará?</strong> Las tallas varían entre marcas y casi nunca se indican medidas.</li>
+                <li><strong>¿En qué estado está?</strong> Las fotos no siempre muestran el desgaste real.</li>
+                <li><strong>¿Cuánto cuesta?</strong> Muchas veces hay que preguntar el precio de cada prenda.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Solución -->
+          <div class="solution-grid">
+            <article class="solution-item reveal">
+              <span class="icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 7h3l2-3h6l2 3h3v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+              </span>
+              <h3>Fotografías reales</h3>
+              <p>Cada prenda se muestra tal como es, sin filtros que oculten detalles.</p>
+            </article>
+            <article class="solution-item reveal">
+              <span class="icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 17 17 3l4 4L7 21H3z"/><path d="M14 6l2 2M11 9l2 2M8 12l2 2"/></svg>
+              </span>
+              <h3>Tallas y medidas claras</h3>
+              <p>Talla y medidas de referencia para que elijas con seguridad.</p>
+            </article>
+            <article class="solution-item reveal">
+              <span class="icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <h3>Estado transparente</h3>
+              <p>Explicamos qué significa “Excelente”, “Muy bueno” o “Bueno”.</p>
+            </article>
+            <article class="solution-item reveal">
+              <span class="icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>
+              </span>
+              <h3>Precios visibles</h3>
+              <p>Todos los precios están publicados en colones, sin tener que preguntar.</p>
+            </article>
+            <article class="solution-item solution-item--wide reveal">
+              <span class="icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg>
+              </span>
+              <h3>Filtros a tu medida</h3>
+              <p>Busca por categoría, talla, estado y presupuesto para encontrar justo lo que necesitas.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="value-banner reveal">
+          <p class="value-banner__text">Compra con confianza. <span>Viste con propósito.</span></p>
+          <a href="#catalogo" class="btn btn--light">Ver prendas disponibles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. CATÁLOGO + 5. BUSCADOR Y FILTROS
+         ========================================================= -->
+    <section class="section" id="catalogo">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="eyebrow">Catálogo</span>
+          <h2>Prendas con información real</h2>
+          <p>Cada pieza es única. Revisa su talla, estado y precio, y abre su ficha digital para conocer todos los detalles.</p>
+        </header>
+
+        <!-- Panel de búsqueda y filtros -->
+        <div class="filters reveal" role="search">
+          <div class="filters__search">
+            <label for="buscador" class="sr-only">Buscar prendas por nombre o código</label>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            <input type="search" id="buscador" placeholder="Busca por nombre o código (ej. RM-003)" autocomplete="off">
+          </div>
+
+          <div class="filters__chips" role="group" aria-label="Filtrar por categoría">
+            <button type="button" class="chip is-active" data-categoria="todas" aria-pressed="true">Todas</button>
+            <button type="button" class="chip" data-categoria="camisetas" aria-pressed="false">Camisetas</button>
+            <button type="button" class="chip" data-categoria="pantalones" aria-pressed="false">Pantalones</button>
+            <button type="button" class="chip" data-categoria="chaquetas" aria-pressed="false">Chaquetas</button>
+          </div>
+
+          <div class="filters__row">
+            <div class="field">
+              <label for="filtroTalla">Talla</label>
+              <select id="filtroTalla">
+                <option value="todas">Todas</option>
+                <!-- Las tallas se agregan automáticamente desde script.js -->
+              </select>
+            </div>
+            <div class="field">
+              <label for="filtroEstado">Estado</label>
+              <select id="filtroEstado">
+                <option value="todos">Todos</option>
+                <option value="Excelente">Excelente</option>
+                <option value="Muy bueno">Muy bueno</option>
+                <option value="Bueno">Bueno</option>
+              </select>
+            </div>
+            <div class="field field--range">
+              <label for="filtroPrecio">Precio máximo: <output id="precioValor" for="filtroPrecio">₡9.000</output></label>
+              <input type="range" id="filtroPrecio" min="3500" max="9000" step="500" value="9000">
+            </div>
+            <button type="button" class="btn btn--outline btn--sm" id="limpiarFiltros">Limpiar filtros</button>
+          </div>
+        </div>
+
+        <p class="catalog__count" id="contadorResultados" aria-live="polite"></p>
+
+        <!-- Aquí JavaScript dibuja las tarjetas de productos -->
+        <div class="product-grid" id="gridProductos"></div>
+
+        <!-- Mensaje cuando no hay resultados -->
+        <div class="empty-state" id="sinResultados" hidden>
+          <span class="icon-circle icon-circle--lg" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M8.5 11h5"/></svg>
+          </span>
+          <h3>No encontramos prendas con esos filtros</h3>
+          <p>Prueba con otra talla, otro estado o un precio máximo más alto.</p>
+          <button type="button" class="btn btn--primary btn--sm" id="sinResultadosLimpiar">Mostrar todas las prendas</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. INNOVACIÓN: CONOCE TU PRENDA (FICHA DIGITAL)
+         ========================================================= -->
+    <section class="section section--olive" id="ficha-digital">
+      <div class="container qr-grid">
+        <div class="qr-text reveal">
+          <span class="eyebrow eyebrow--light">Innovación ReModa</span>
+          <h2>Conoce tu prenda</h2>
+          <p>
+            Cada prenda tiene su propia <strong>ficha digital</strong>: un espacio con toda su información
+            reunida en un solo lugar, para que compres sabiendo exactamente lo que llevas.
+          </p>
+          <ul class="check-list">
+            <li>Fotografías y código de inventario</li>
+            <li>Talla y medidas de referencia</li>
+            <li>Estado de conservación explicado</li>
+            <li>Precio, material y cuidados</li>
+          </ul>
+          <p class="qr-note">
+            <strong>Próximamente:</strong> en la versión completa del emprendimiento, cada artículo podría llevar
+            en su etiqueta un código QR para abrir esta ficha desde el celular. En este prototipo, la ficha
+            se abre con el botón “Ver detalles” de cada prenda.
+          </p>
+          <button type="button" class="btn btn--light" id="btnFichaEjemplo" data-id="RM-005">Ver una ficha de ejemplo</button>
+        </div>
+
+        <!-- Ilustración conceptual (etiqueta + celular) -->
+        <div class="qr-visual reveal" aria-hidden="true">
+          <div class="tag">
+            <span class="tag__hole"></span>
+            <span class="tag__brand">ReModa</span>
+            <span class="tag__code">RM-005</span>
+            <div class="tag__qr">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 14v7h-4M14 18v3"/></svg>
+              <small>Espacio para<br>código QR</small>
+            </div>
+          </div>
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="phone__img"></div>
+              <span class="phone__pill">Ficha digital</span>
+              <span class="phone__line phone__line--title"></span>
+              <span class="phone__line"></span>
+              <span class="phone__line phone__line--short"></span>
+              <div class="phone__specs">
+                <span>Talla</span><span>Estado</span><span>Precio</span>
+              </div>
+              <span class="phone__btn"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. ¿CÓMO FUNCIONA REMODA?
+         ========================================================= -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="eyebrow">Paso a paso</span>
+          <h2>¿Cómo funciona ReModa?</h2>
+          <p>Encontrar tu próxima prenda favorita toma solo cuatro pasos.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__number">01</span>
+            <span class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            </span>
+            <h3>Explora</h3>
+            <p>Encuentra prendas según tu estilo, talla y presupuesto.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__number">02</span>
+            <span class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
+            <h3>Conoce</h3>
+            <p>Revisa las fotografías y la información real de cada artículo.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__number">03</span>
+            <span class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg>
+            </span>
+            <h3>Elige</h3>
+            <p>Selecciona la prenda que te interesa con el botón “Me interesa”.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__number">04</span>
+            <span class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.9A8 8 0 1 1 21 12z"/></svg>
+            </span>
+            <h3>Consulta</h3>
+            <p>Contacta con la tienda para confirmar disponibilidad y coordinar la compra.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. BENEFICIOS
+         ========================================================= -->
+    <section class="section section--cream" id="beneficios">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="eyebrow">Beneficios</span>
+          <h2>¿Por qué comprar en ReModa?</h2>
+          <p>Moda con estilo que cuida tu bolsillo y le da una nueva vida a cada prenda.</p>
+        </header>
+
+        <div class="benefits">
+          <article class="benefit reveal">
+            <span class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9a2.5 2.5 0 0 0-2.5-1.5c-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2A2.5 2.5 0 0 1 9.5 15M12 6v1.5M12 16.5V18"/></svg>
+            </span>
+            <h3>Precios accesibles</h3>
+            <p>Prendas de calidad a precios pensados para tu presupuesto.</p>
+          </article>
+          <article class="benefit reveal">
+            <span class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+            </span>
+            <h3>Información transparente</h3>
+            <p>Talla, medidas, estado y precio a la vista antes de decidir.</p>
+          </article>
+          <article class="benefit reveal">
+            <span class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6-4.5-4.2 6.1-.7z"/></svg>
+            </span>
+            <h3>Prendas únicas</h3>
+            <p>Piezas con carácter que difícilmente verás repetidas.</p>
+          </article>
+          <article class="benefit reveal">
+            <span class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4M20 12a8 8 0 0 1-14 5.3M4 20v-4h4"/></svg>
+            </span>
+            <h3>Reutilización de ropa</h3>
+            <p>Cada compra extiende la vida útil de una prenda que ya existe.</p>
+          </article>
+          <article class="benefit reveal">
+            <span class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 21c0-9 5-15 15-16-1 10-7 15-15 16z"/><path d="M5 21c3-4 6-7 10-10"/></svg>
+            </span>
+            <h3>Menor desperdicio textil</h3>
+            <p>Elegir segunda mano ayuda a que menos ropa termine en la basura.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. CONTACTO
+         ========================================================= -->
+    <section class="section section--beige" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <span class="eyebrow">Contacto</span>
+          <h2>¿Te gustó una prenda? Consulta su disponibilidad</h2>
+          <p>
+            Como cada prenda es única, te recomendamos confirmar su disponibilidad antes de coordinar la compra.
+          </p>
+          <ol class="howto">
+            <li><span>1</span>Anota el <strong>código</strong> de la prenda (por ejemplo, RM-003).</li>
+            <li><span>2</span>Escríbenos por WhatsApp o mediante el formulario.</li>
+            <li><span>3</span>Te confirmamos si sigue disponible y coordinamos la entrega y el pago.</li>
+          </ol>
+
+          <button type="button" class="btn btn--whatsapp" id="btnWhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.9A8 8 0 1 1 21 12z"/><path d="M9 10h.01M12 10h.01M15 10h.01"/></svg>
+            Escribir por WhatsApp
+          </button>
+          <p class="contact-note" id="avisoWhatsApp" hidden>
+            El WhatsApp de la tienda estará disponible próximamente. Mientras tanto, usa el formulario.
+          </p>
+        </div>
+
+        <form class="contact-form reveal" id="formContacto" novalidate>
+          <h3>Envíanos un mensaje</h3>
+          <div class="form-field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required>
+            <small class="form-error" aria-live="polite"></small>
+          </div>
+          <div class="form-field">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
+            <small class="form-error" aria-live="polite"></small>
+          </div>
+          <div class="form-field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Hola, me interesa la prenda RM-003. ¿Sigue disponible?" required></textarea>
+            <small class="form-error" aria-live="polite"></small>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Enviar consulta</button>
+          <p class="form-status" id="estadoFormulario" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       10. PIE DE PÁGINA
+       ========================================================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#inicio" class="logo logo--light" aria-label="ReModa, ir al inicio">
+          <img src="logo-icono.png" alt="" class="logo__mark" width="44" height="44">
+          <span class="logo__text">Re<span>Moda</span></span>
+        </a>
+        <p class="footer__phrase">Dale una segunda vida a tu estilo.</p>
+        <p class="footer__student">Proyecto de emprendimiento estudiantil desarrollado con fines académicos.</p>
+      </div>
+
+      <div>
+        <h4>Secciones</h4>
+        <ul class="footer__links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#ficha-digital">Conoce tu prenda</a></li>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contacto</h4>
+        <!-- Se completa desde CONFIG en script.js -->
+        <ul class="footer__contact" id="footerContacto"></ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="anioActual">2026</span> ReModa · Prototipo estudiantil · Costa Rica</p>
+      <button type="button" class="footer__top" id="btnArriba">
+        Volver arriba
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       FICHA DIGITAL (VENTANA MODAL)
+       ========================================================= -->
+  <div class="modal" id="modalFicha" hidden>
+    <div class="modal__overlay" data-cerrar></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="fichaTitulo">
+      <button type="button" class="modal__close" data-cerrar aria-label="Cerrar ficha">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <div class="ficha" id="fichaContenido"></div>
+    </div>
+  </div>
+
+  <!-- Notificaciones breves -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
